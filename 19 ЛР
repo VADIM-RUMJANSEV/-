@@ -1,0 +1,33 @@
+# include <iostream>
+# include <Windows.h>
+
+int main() {
+	using namespace std;
+	setlocale(0, "");
+	int arr[5];
+	int arrUser;
+	int _;
+	for (int i = 0; i < 5; i++) {
+		cout << "[+] Ввидите " << i << " число = ";
+		cin >> arrUser;
+		arr[i] = arrUser;
+		cout << endl;
+	}
+	system("cls");
+	for (int j = 0; j < 5; j++) {
+		cout << "|  Таблица :   " << j + 1;
+		cout << "\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+		cout << "|     Число\t|\t\tПример\t\t|   Результат   |\n";
+		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+		cout << "|\t" << arr[j] << "\t|\t\t" << arr[j] << " + " << arr[j] << "\t\t|\t" << arr[j] + arr[j] << "\t|\n";
+		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+		cout << "|\t" << arr[j] << "\t|\t\t" << arr[j] << " - " << arr[j] << "\t\t|\t" << arr[j] - arr[j] << "\t|\n";
+		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+		cout << "|\t" << arr[j] << "\t|\t\t" << arr[j] << " / " << arr[j] << "\t\t|\t" << arr[j] / arr[j] << "\t|\n";
+		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+		cout << "|\t" << arr[j] << "\t|\t\t" << arr[j] << " * " << arr[j] << "\t\t|\t" << arr[j] * arr[j] << "\t|\n";
+		cout << "- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\n";
+		cin >> _;
+		system("cls");
+	}
+}
