@@ -1,0 +1,30 @@
+# include <iostream>
+# include <Windows.h>
+
+int main() {
+	using namespace std;
+	setlocale(0, "");
+	int a;
+	int b = 0;
+	cout << "[+] Цикл «WHILE»" << endl;
+	cout << endl;
+	while (true) {
+		cout << "[+] Введите число: ";
+		cin >> a;
+		cout << endl;
+		if (a > 0 and a < 16) {
+			while (a != b) {
+				b = b + 1;
+				cout << "[+] Цикл отработал. Круг: " << b << endl;
+			}
+		}
+		else if (a <= 0) {
+			cout << "Число меньше или равно 0\n";
+		}
+		else {
+			cout << "Число больше 15\n";
+		}
+		cout << endl;
+		b = 0;
+	}
+}
