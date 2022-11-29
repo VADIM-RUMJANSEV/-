@@ -1,0 +1,139 @@
+# include <iostream>
+# include <Windows.h>
+
+int main() {
+	using namespace std;
+	setlocale(0, "");
+	int arr[7];
+	int arrUser;
+	int _;
+	int userMultiply;
+	int userAddition;
+	int userDivision;
+	int user;
+	int i = 0;
+	int j = 0;
+	int k;
+	while (i < 7) {
+		cout << "[+] Инициализация | ячейка" << i << ": ";
+		cin >> arrUser;
+		arr[i] = arrUser;
+		i++;
+		system("cls");
+	}
+	i = 0;
+	while (true) {
+		cout << "[+] Настройки массива:\n\n[1] Сортировка по возрастанию\n[2] Сортировка по убыванию\n[3] Перемножить массив\n[4] Сложить массив\n[5] Разделить массив\n[6] Обнулить массив\n\n[9] Задать новые значения массиву\n[+] Ввод: ";
+		cin >> user;
+		switch (user) {
+		case 1:
+			while (i < 7) {
+				while (j < 6) {
+					if (arr[j] > arr[j + 1]) {
+						k = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = k;
+					}
+					j++;
+				}
+				j = 0;
+				i++;
+			}
+			i = 0;
+			j = 0;
+			while (i < 7) {
+				cout << "[+] Вывод | ячейки " << i << ": " << arr[i] << endl;
+				i++;
+			}
+			i = 0;
+			break;
+		case 2:
+			while (i < 7) {
+				while (j < 6) {
+					if (arr[j] < arr[j + 1]) {
+						k = arr[j];
+						arr[j] = arr[j + 1];
+						arr[j + 1] = k;
+					}
+					j++;
+				}
+				j = 0;
+				i++;
+			}
+			i = 0;
+			j = 0;
+			while (i < 7) {
+				cout << "[+] Вывод | ячейки " << i << ": " << arr[i] << endl;
+				i++;
+			}
+			i = 0;
+			break;
+		case 3:
+			cout << "Ввидите множитель : ";
+			cin >> userMultiply;
+			cout << endl;
+			while (i < 7) {
+				arr[i] = arr[i] * userMultiply;
+				cout << "[+] Вывод | ячейки " << i << ": " << arr[i] << endl;
+				i++;
+			}
+			i = 0;
+			break;
+
+		case 4:
+			cout << "Ввидите число для сложения : ";
+			cin >> userAddition;
+			cout << endl;
+			while (i < 7) {
+				arr[i] = arr[i] + userAddition;
+				cout << "[+] Вывод | ячейки " << i << ": " << arr[i] << endl;
+				i++;
+			}
+			i = 0;
+			break;
+		case 5:
+			cout << "Ввидите делитель : ";
+			cin >> userDivision;
+			cout << endl;
+			while (i < 7) {
+				arr[i] = arr[i] / userDivision;
+				cout << "[+] Вывод | ячейки " << i << ": " << arr[i] << endl;
+				i++;
+			}
+			i = 0;
+			break;
+		case 6:
+			while (i < 7) {
+				arr[i] = 0;
+				i++;
+			}
+			i = 0;
+			while (i < 7) {
+				cout << "[+] Вывод | ячейки " << i << ": " << arr[i] << endl;
+				i++;
+			}
+			i = 0;
+			break;
+		case 9:
+			while (i < 7) {
+				cout << "Ввидите | ячейку " << i <<" : ";
+				cin >> arrUser;
+				cout << endl;
+				arr[i] = arrUser;
+				i++;
+			}
+			i = 0;
+			while (i < 7) {
+				cout << "[+] Вывод | ячейки " << i << ": " << arr[i] << endl;
+				i++;
+			}
+			i = 0;
+			break;
+		default:
+			system("cls");
+			break;
+		}
+		cin >> _;
+		system("cls");
+	}
+}
