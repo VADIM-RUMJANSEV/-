@@ -1,0 +1,671 @@
+# include <iostream>
+# include <Windows.h>
+
+int main() {
+	using namespace std;
+	setlocale(0, "");
+	int a;
+	int b;
+	int c;
+	int j;
+	int width;
+	int height;
+	int length;
+	char d;
+	int e = 0;                                        
+	int i = 0;
+	int u = 0;
+	int y = 0;
+	int z = 0;
+	cout << "\x1b[0m";
+	cout << "[+] Программа - “Геометрические фигуры”\n" << endl;
+	cout << "[1] Линия\n";
+	cout << "[2] Квадрат\n";
+	cout << "[3] Прямоугольник\n";
+	cout << "[4] Треугольник\n";
+	cout << "[5] Решетка\n";
+	cout << "[6] Крестик\n";
+	cout << "[7] Плюс\n";
+	cout << "[8] Ромб\n";
+	cout << "[9] Отражение квадрата \n" << endl;
+	cout << "[+] Выберите фигуру: ";
+	cin >> a;
+	system("cls");
+	switch (a) {
+	case 1:
+		cout << "[+] Фигура: “Линия”\n" << endl;
+		cout << "[1] Горизонтальная\n";
+		cout << "[2] Вертикальная\n" << endl;
+		cout << "[+] Выберите тип: ";
+		cin >> b;
+		system("cls");
+		switch (b) {
+		case 1:
+			cout << "[+] Длина линии: ";
+			cin >> c;
+			if (c > 0) {
+				cout << endl << "[+] Текстура линии: ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (c != e) {
+					e = e + 1;
+					cout << d;
+				}
+				e = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+		case 2:
+			cout << "[+] Длина линии: ";
+			cin >> c;
+			if (c > 0) {
+				cout << endl << "[+] Текстура линии: ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (c != e) {
+					e = e + 1;
+					cout << d << endl;
+				}
+				e = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+			break;
+		default:
+			cout << "Ошибка, введите другое число";
+		}
+		break;
+	case 2:
+		cout << "[+] Фигура: “Квадрат”\n" << endl;
+		cout << "[1] Заполненный\n";
+		cout << "[2] Пустой\n" << endl;
+		cout << "[+] Выберите тип: ";
+		cin >> b;
+		system("cls");
+		switch (b) {
+		case 1:
+			cout << "[+] Размер: ";
+			cin >> c;
+			if (c > 0) {
+				cout << endl << "[+] Текстура: ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (c != i) {
+					i = i + 1;
+					while (c != e) {
+						e = e + 1;
+						cout << d << " ";
+					}
+					e = 0;
+					cout << endl;
+				}
+				i = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+		case 2:
+			cout << "[+] Размер: ";
+			cin >> c;
+			if (c > 0) {
+				cout << endl << "[+] Текстура: ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (c != i) {
+					i = i + 1;
+					if (i == 1 || i == c) {
+						while (c != e) {
+							e = e + 1;
+							cout << d << " ";
+						}
+						e = 0;
+						cout << endl;
+					}
+					else {
+						cout << d << " ";
+						while (c - 2 != e) {
+							e = e + 1;
+							cout << "  ";
+						}
+						cout << d << " ";
+						e = 0;
+						cout << endl;
+					}
+				}
+				i = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+		default:
+			cout << "Ошибка, введите другое число";
+		}
+		break;
+	case 3:
+		cout << "[+] Фигура: “Прямоугольник”\n" << endl;
+		cout << "[1] Заполненный\n";
+		cout << "[2] Пустой\n" << endl;
+		cout << "[+] Выберите тип: ";
+		cin >> b;
+		system("cls");
+		switch (b) {
+		case 1:
+			cout << "[+] Ширина: ";
+			cin >> width;
+			cout << "[+] Высота: ";
+			cin >> height;
+			if (width > 0 && height > 0) {
+				cout << endl << "[+] Текстура: ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (height != i) {
+					i = i + 1;
+					while (width != e) {
+						e = e + 1;
+						cout << d << " ";
+					}
+					e = 0;
+					cout << endl;
+				}
+				i = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+		case 2:
+			cout << "[+] Ширина: ";
+			cin >> width;
+			cout << "[+] Высота: ";
+			cin >> height;
+			if (width > 0 && height > 0) {
+				cout << endl << "[+] Текстура: ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (height != i) {
+					i = i + 1;
+					if (i == 1 || i == height) {
+						while (width != e) {
+							e = e + 1;
+							cout << d << " ";
+						}
+						e = 0;
+						cout << endl;
+					}
+					else {
+						cout << d << " ";
+						while (width - 2 != e) {
+							e = e + 1;
+							cout << "  ";
+						}
+						cout << d << " ";
+						e = 0;
+						cout << endl;
+					}
+				}
+				i = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+		default:
+			cout << "Ошибка, введите другое число";
+		}
+		break;
+	case 4:
+		cout << "[+] Фигура: “Треугольник”\n" << endl;
+		cout << "[1] Заполненный\n";
+		cout << "[2] Пустой\n" << endl;
+		cout << "[+] Выберите тип: ";
+		cin >> b;
+		system("cls");
+		switch (b) {
+		case 1:
+			cout << "[+] Высота: ";
+			cin >> c;
+			length = (c * 2) - 1;
+			if (c > 0) {
+				cout << endl << "[+] Текстура : ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (c != i) {
+					i = i + 1;
+					if (i != c) {
+						while (((length - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						cout << d << " ";
+						while (i - 1 != e) {
+							e = e + 1;
+							cout << d << " ";
+							cout << d << " ";
+						}
+						e = 0;
+						while (((length - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						u = u + 1;
+						cout << endl;
+					}
+					else {
+						while (length != e) {
+							e = e + 1;
+							cout << d << " ";
+						}
+					}
+				}
+				i = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+		case 2:
+			cout << "[+] Высота: ";
+			cin >> c;
+			length = (c * 2) - 1;
+			if (c > 0) {
+				cout << endl << "[+] Текстура: ";
+				cin >> d;
+				cout << endl << "[+] Результат: \n";
+				while (c != i) {
+					i = i + 1;
+					if (i != c) {
+						while (((length - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						cout << d << " ";
+						while (i - 1 != e) {
+							e = e + 1;
+							if (i - 1 != e) {
+								cout << ". ";
+								cout << ". ";
+							}
+							else {
+								cout << ". ";
+								cout << d << " ";
+							}
+						}
+						e = 0;
+						while (((length - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						u = u + 1;
+						cout << endl;
+					}
+					else {
+						while (length != e) {
+							e = e + 1;
+							cout << d << " ";
+						}
+					}
+				}
+				i = 0;
+			}
+			else {
+				cout << "Число меньше нуля, ошибка.";
+			}
+			break;
+		default:
+			cout << "Ошибка, введите другое число";
+		}
+		break;
+	case 5:
+		cout << "[+] Фигура: “Решетка”\n" << endl;
+		cout << "[+] Размер: ";
+		cin >> c;
+		if (c > 0) {
+			cout << endl << "[+] Текстура: ";
+			cin >> d;
+			cout << endl << "[+] Результат: \n";
+			while (c != i) {
+				i = i + 1;
+				if (i % 2 == 1) {
+					while (c != e) {
+						e = e + 1;
+						if (e % 2 == 0) {
+							cout << d << " ";
+						}
+						else {
+							cout << ". ";
+						}
+					}
+				}
+				else {
+					while (c != e) {
+						e = e + 1;
+						cout << d << " ";
+					}
+				}
+				e = 0;
+				cout << endl;
+			}
+			i = 0;
+		}
+		else {
+			cout << "Число меньше нуля, ошибка.";
+		}
+		break;
+	case 6:
+		cout << "[+] Фигура: “Крестик”\n" << endl;
+		cout << "[+] Размер: ";
+		cin >> c;
+		length = c - 2;
+		if (c > 0) {
+			cout << endl << "[+] Текстура: ";
+			cin >> d;
+			cout << endl << "[+] Результат: \n";
+			while (c != i) {
+				i = i + 1;
+				if (i < (c / 2) + 1) {
+					y = y + 1;
+					while (e != i) {
+						e = e + 1;
+						if (e == i) {
+							cout << d << " ";
+						}
+						else {
+							cout << ". ";
+						}
+					}
+					e = 0;
+					while (e != length) {
+						e = e + 1;
+						cout << ". ";
+					}
+					e = 0;
+					while (e != i) {
+						e = e + 1;
+						if (e == 1) {
+							cout << d << " ";
+						}
+						else {
+							cout << ". ";
+						}
+					}
+					e = 0;
+					length = length - 2;
+				}
+				else {
+					if (c % 2 == 0) {
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						cout << d << " ";
+						while (i - 1 - y != e) {
+							e = e + 1;
+							cout << ". ";
+							cout << ". ";
+						}
+						cout << d << " ";
+						e = 0;
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						u = u + 1;
+					}
+					else {
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						cout << d << " ";
+						while (i - 1 - y != e) {
+							e = e + 1;
+							if (i - 1 - y != e) {
+								cout << ". ";
+								cout << ". ";
+							}
+							else {
+								cout << ". ";
+								cout << d << " ";
+							}
+						}
+						e = 0;
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						u = u + 1;
+					}
+				}
+				cout << endl;
+			}
+			i = 0;
+		}
+		else {
+			cout << "Число меньше нуля, ошибка.";
+		}
+		break;
+	case 7:
+		cout << "[+] Фигура: “Плюс”\n" << endl;
+		cout << "[+] Размер: ";
+		cin >> c;
+		length = c - 2;
+		if (c > 0) {
+			cout << endl << "[+] Текстура: ";
+			cin >> d;
+			cout << endl << "[+] Результат: \n";
+			while (c != i) {
+				i = i + 1;
+				if (c % 2 == 1) {
+					if ((c - 1) / 2 == i - 1) {
+						while (c != e) {
+							e = e + 1;
+							cout << d << " ";
+						}
+						cout << endl;
+						i = i + 1;
+						e = 0;
+					}
+					while ((c - 1) / 2 != e) {
+						e = e + 1;
+						cout << ". ";
+					}
+					e = 0;
+					cout << d << " ";
+					while ((c - 1) / 2 != e) {
+						e = e + 1;
+						cout << ". ";
+					}
+					e = 0;
+				}
+				else {
+					if (c / 2 == i - 1) {
+						while (c + 2 != e) {
+							e = e + 1;
+							cout << d << " ";
+						}
+						cout << endl;
+						e = 0;
+						while (c + 2 != e) {
+							e = e + 1;
+							cout << d << " ";
+						}
+						cout << endl;
+						e = 0;
+					}
+					while (c / 2 != e) {
+						e = e + 1;
+						cout << ". ";
+					}
+					e = 0;
+					cout << d << " ";
+					cout << d << " ";
+					while (c / 2 != e) {
+						e = e + 1;
+						cout << ". ";
+					}
+					e = 0;
+				}
+				cout << endl;
+			}
+			i = 0;
+		}
+		else {
+			cout << "Число меньше нуля, ошибка.";
+		}
+		break;
+	case 8:
+		cout << "[+] Фигура: “Ромб”\n" << endl;
+		cout << "[+] Размер: ";
+		cin >> c;
+		length = c - 2;
+		if (c > 0) {
+			cout << endl << "[+] Текстура: ";
+			cin >> d;
+			cout << endl << "[+] Результат: \n";
+			while (c != i) {
+				i = i + 1;
+				if (i < (c / 2) + 1) {
+					y = y + 1;
+					if (c % 2 == 0) {
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						cout << d << " ";
+						while (i - 1 != e) {
+							e = e + 1;
+							cout << ". ";
+							cout << ". ";
+						}
+						cout << d << " ";
+						e = 0;
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						u = u + 1;
+					}
+					else {
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						cout << d << " ";
+						while (i - 1 != e) {
+							e = e + 1;
+							if (i - 1 != e) {
+								cout << ". ";
+								cout << ". ";
+							}
+							else {
+								cout << ". ";
+								cout << d << " ";
+							}
+						}
+						e = 0;
+						while (((c - 1) / 2) - u != e) {
+							e = e + 1;
+							cout << ". ";
+						}
+						e = 0;
+						u = u + 1;
+					}
+				}
+				else {
+					while (e != i - y) {
+						e = e + 1;
+						if (e == i - y) {
+							if (c % 2 == 0) {
+								cout << d << " ";
+							}
+							else {
+								if (i == c) {
+								}
+								else {
+									cout << d << " ";
+								}
+							}
+						}
+						else {
+							cout << ". ";
+						}
+					}
+					e = 0;
+					while (e != length && length > 0) {
+						e = e + 1;
+						cout << ". ";
+					}
+					e = 0;
+					while (e != i - y) {
+						e = e + 1;
+						if (e == 1) {
+							cout << d << " ";
+						}
+						else {
+							cout << ". ";
+						}
+					}
+					e = 0;
+					length = length - 2;
+				}
+				cout << endl;
+			}
+			i = 0;
+		}
+		else {
+			cout << "Число меньше нуля, ошибка.";
+		}
+		break;
+	case 9:
+		cout << "[+] Фигура: “Отражение квадрата”\n" << endl;
+		cout << "[+] Ввидите размер : ";
+		cin >> c;
+		if (c % 2 == 0) {
+			c++;
+		}
+		while (c != i) {
+			while (c != e) {
+				if (((i == y) && (y <= e) && (e <= c - 1 - y)) || ((e == u) && (u <= i) && (i <= c - 1 - u)) || ((e ==  u) && (c - u <= i) && (i <= u)) || ((i == y) && (c - y <= e) && (e <= y))) {
+					cout << " \x1b[92m+\x1b[0m";
+				}
+				else {
+					cout << " \x1b[92m-\x1b[0m";
+				}
+				if (e % 2 == 0) {
+					u = u + 2;
+				}
+				e++;
+			}
+			if (i % 2 == 0) {
+				y = y + 2;
+			}
+			u = 0;
+			e = 0;
+			cout << endl;
+			i++;
+		}
+		i = 0;
+		break;
+	default:
+		cout << "Ошибка, введите другое число";
+		break;
+	}
+	cout << "\x1b[30m";
+}
