@@ -1,0 +1,135 @@
+# include <iostream>
+# include <Windows.h>
+
+int main() {
+	using namespace std;
+	setlocale(0, "");
+	int a;
+	cout << "[+] Переводчик\n" << endl << "[1] Русские слова\n" << "[2] Английские слова\n" << endl << "[3] Выйти\n" << "[+] Выберите пункт: ";
+	cin >> a;
+	system("cls");
+	switch (a)
+	{
+	case 1:
+		cout << "[+] Переводчик “Список русских слов”\n" << endl;
+		cout << "[1] Дом\n" << "[2] Дорога\n" << "[3] Дерево\n" << "[4] Машина\n" << "[5] Куст\n" << "[6] Ведро\n" << "[7] Мяч\n" << "[8] Гараж\n" << "[9] Пёс\n" << "[10] Кот\n" << "[11] Попугай\n" << "[12] Еда\n" << "[13] Вода\n" << "[14] Привет\n" << "[15] Пока\n" << endl;
+		cout << "[+]Выберите номер слова: ";
+		cin >> a;
+		switch (a)
+		{
+		case 1:
+			cout << "[+] Перевод: Дом -> House";
+			break;
+		case 2:
+			cout << "[+] Перевод: Дорога -> Road";
+			break;
+		case 3:
+			cout << "[+] Перевод: Дерево -> Wood";
+			break;
+		case 4:
+			cout << "[+] Перевод: Машина -> Car";
+			break;
+		case 5:
+			cout << "[+] Перевод: Куст -> Bush";
+			break;
+		case 6:
+			cout << "[+] Перевод: Ведро -> Bucket";
+			break;
+		case 7:
+			cout << "[+] Перевод: Мяч -> Ball";
+			break;
+		case 8:
+			cout << "[+] Перевод: Гараж -> Garage";
+			break;
+		case 9:
+			cout << "[+] Перевод: Пёс -> Dog";
+			break;
+		case 10:
+			cout << "[+] Перевод: Кот -> Cat";
+			break;
+		case 11:
+			cout << "[+] Перевод: Попугай -> Parrot";
+			break;
+		case 12:
+			cout << "[+] Перевод: Еда -> Food";
+			break;
+		case 13:
+			cout << "[+] Перевод: Вода -> Water";
+			break;
+		case 14:
+			cout << "[+] Перевод: Привет -> Hello";
+			break;
+		case 15:
+			cout << "[+] Перевод: Пока -> Bye";
+			break;
+		default:
+			cout << "[+] Такого слова нет в списке";
+			break;
+		}
+		break;
+	case 2:
+		cout << "[+] Переводчик “Список английских слов”\n" << endl;
+		cout << "[1] House\n" << "[2] Road\n" << "[3] Wood\n" << "[4] Car\n" << "[5] Bush\n" << "[6] Bucket\n" << "[7] Ball\n" << "[8] Garage\n" << "[9] Dog\n" << "[10] Cat\n" << "[11] Parrot\n" << "[12] Food\n" << "[13] Water\n" << "[14] Hello\n" << "[15] Bye\n" << endl;
+		cout << "[+]Выберите номер слова: ";
+		cin >> a;
+		switch (a)
+		{
+		case 1:
+			cout << "[+] Перевод: House -> Дом";
+			break;
+		case 2:
+			cout << "[+] Перевод: Road -> Дорога";
+			break;
+		case 3:
+			cout << "[+] Перевод: Wood -> Дерево";
+			break;
+		case 4:
+			cout << "[+] Перевод: Car -> Машина";
+			break;
+		case 5:
+			cout << "[+] Перевод: Bush -> Куст";
+			break;
+		case 6:
+			cout << "[+] Перевод: Bucket -> Ведро";
+			break;
+		case 7:
+			cout << "[+] Перевод: Ball -> Мяч";
+			break;
+		case 8:
+			cout << "[+] Перевод: Garage -> Гараж";
+			break;
+		case 9:
+			cout << "[+] Перевод: Dog -> Пёс";
+			break;
+		case 10:
+			cout << "[+] Перевод: Cat -> Кот";
+			break;
+		case 11:
+			cout << "[+] Перевод: Parrot -> Попугай";
+			break;
+		case 12:
+			cout << "[+] Перевод: Food -> Еда";
+			break;
+		case 13:
+			cout << "[+] Перевод: Water -> Вода";
+			break;
+		case 14:
+			cout << "[+] Перевод: Hello -> Привет";
+			break;
+		case 15:
+			cout << "[+] Перевод: Bye -> Пока";
+			break;
+		default:
+			cout << "[+] Такого слова нет в списке";
+			break;
+		}
+		break;
+	case 3:
+		return 0;
+		break;
+	default:
+		cout << "Указанного пункта нет";
+		break;
+	}
+	cout << "\x1b[30m";
+}
