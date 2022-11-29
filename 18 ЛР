@@ -1,0 +1,75 @@
+# include <iostream>
+# include <Windows.h>
+
+int main() {
+	using namespace std;
+	setlocale(0, "");
+	int a_1[10];
+	short a_2[10];
+	long a_3[10];
+	float a_4[10];
+	double a_5[10];
+	char a_6[10];
+	bool a_7[10];
+	string a_8[10];
+	cout << "[+] Массив INT \n";
+	for (int i_1 = 0; i_1 < 10; i_1++) {
+		cout << "[+] Ввидите " << i_1 << " ячейку ";
+		cin >> a_1[i_1];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив SHORT \n";
+	for (int i_2 = 0; i_2 < 10; i_2++) {
+		cout << "[+] Ввидите " << i_2 << " ячейку ";
+		cin >> a_2[i_2];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив LONG \n";
+	for (int i_3 = 0; i_3 < 10; i_3++) {
+		cout << "[+] Ввидите " << i_3 << " ячейку ";
+		cin >> a_3[i_3];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив FLOAT \n";
+	for (int i_4 = 0; i_4 < 10; i_4++) {
+		cout << "[+] Ввидите " << i_4 << " ячейку ";
+		cin >> a_4[i_4];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив DOUBLE \n";
+	for (int i_5 = 0; i_5 < 10; i_5++) {
+		cout << "[+] Ввидите " << i_5 << " ячейку ";
+		cin >> a_5[i_5];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив CHAR \n";
+	for (int i_6 = 0; i_6 < 10; i_6++) {
+		cout << "[+] Ввидите " << i_6 << " ячейку ";
+		cin >> a_6[i_6];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив BOOL \n";
+	for (int i_7 = 0; i_7 < 10; i_7++) {
+		cout << "[+] Ввидите " << i_7 << " ячейку ";
+		cin >> a_7[i_7];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив STRING \n ";
+	for (int i_8 = 0; i_8 < 10; i_8++) {
+		cout << "[+] Ввидите " << i_8 << " ячейку ";
+		cin >> a_8[i_8];
+		cout << endl;
+	}
+	system("cls");
+	cout << "[+] Массив  |\tINT\tSHORT\tLONG\tFLOAT\tDOUBLE\tCHAR\tBOOL\tSTRING\n";
+	for (int i_9 = 0; i_9 < 10; i_9++) {
+		cout << "[+] ячейка" << i_9 << " |\t" << a_1[i_9] << "\t" << a_2[i_9] << "\t" << a_3[i_9] << "\t" << a_4[i_9] << "\t" << a_5[i_9] << "\t" << a_6[i_9] << "\t" << a_7[i_9] << "\t" << a_8[i_9] << endl;
+	}
+}
